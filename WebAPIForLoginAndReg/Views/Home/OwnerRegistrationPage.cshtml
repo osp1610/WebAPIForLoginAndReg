@@ -1,0 +1,104 @@
+﻿@model WebAPIForLoginAndReg.Models.ownerRegistration
+@{
+    ViewBag.Title = "OwnerRegistrationPage";
+}
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<div class="container">
+   
+
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <header class="card-header">
+                    @*<a href="" class="float-right btn btn-outline-primary mt-1">Log in</a>*@
+                    <input type="button" name="Login" value="Login" onclick="location.href='@Url.Action("OwnerLogin","Home")'"  class="float-right btn btn-outline-primary mt-1" />
+                    <h4 class="card-title mt-2">Hotel Owner Sign up</h4>
+                </header>
+                <article class="card-body">
+                    <form method="post" action="OwnerRegistration">
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <label>Owner Name </label>
+                                <input type="text" name="ownerName" class="form-control" required placeholder="Owner Name">
+                            </div>
+
+                            <!-- form-group end.// -->
+
+                        </div> <!-- form-row end.// -->
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <label>Email address</label>
+                                <input type="email" name="emailId" class="form-control" required placeholder="Email">
+                            </div>
+                            <div class="col form-group">
+                                <label>Hotel Registration Number </label>
+                                <input type="text" name="hotelRegistrationNumber" class="form-control" required placeholder="Hotel Registration Number">
+                            </div>
+                            </div>
+                            <!-- form-group end.// -->
+
+
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <label>Contact Number </label>
+                                    <input type="text" name="contactNumber" class="form-control" required placeholder="Contact Number">
+                                </div> <!-- form-group end.// -->
+                                <div class="col form-group">
+                                    <label>Hotel Name</label>
+                                    <input type="text" name="hotelName" class="form-control" required placeholder="Hotel Name">
+                                </div><!-- form-group end.// -->
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <label>Hotel Address </label>
+                                    <input type="text" name="hotelAddress" class="form-control" required placeholder="Hotel Address">
+                                </div> <!-- form-group end.// -->
+                                <div class="form-group col-md-6">
+                                    <label>City</label>
+                                    <select id="inputState" name="hotelCity" required class="form-control">
+                                        <option> Choose...</option>
+                                        <option>Pune</option>
+                                        <option>Mumbai</option>
+                                        <option selected="">Hyderabad</option>
+                                        <option>Delhi</option>
+                                        <option>Banglore</option>
+                                    </select>
+                                </div><!-- form-group end.// -->
+                            </div>
+
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>Password</label>
+                                    <input type="password" placeholder="Password" id="password" required class="form-control">
+                                </div> <!-- form-group end.// -->
+                                <div class="form-group col-md-6">
+                                    <label>Confirm Password</label>
+                                    <input type="password" name="password" id="confirm_password" placeholder="Confirm Password" required class="form-control">
+                                </div> <!-- form-group end.// -->
+                            </div> <!-- form-row.// -->
+                            <!-- form-group end.// -->
+
+                            <div class="form-group">
+                                <button type="submit" name="Register" class="btn btn-primary btn-block"> Register  </button>
+                            </div> <!-- form-group// -->
+                    </form>
+                </article> <!-- card-body end .// -->
+                <div class="border-top card-body text-center">Have an account? <a href="">Log In</a></div>
+            </div> <!-- card.// -->
+        </div> <!-- col.//-->
+
+    </div> <!-- row.//-->
+
+
+</div>
+<!--container end.//-->
+
+
+

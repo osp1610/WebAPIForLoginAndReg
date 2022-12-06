@@ -1,0 +1,52 @@
+﻿@model WebAPIForLoginAndReg.Models.ownerLogin
+@{
+    ViewBag.Title = "OwnerLogin";
+}
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<div class="container">
+
+
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <header class="card-header">
+                    @*<a href="" class="float-right btn btn-outline-primary mt-1">Log in</a>*@
+                    <h4 class="card-title mt-2">Hotel Owner Login</h4>
+                </header>
+                <article class="card-body">
+                    <form method="post" action="OwnerLogin" >
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <label>User Name </label>
+                                <input type="text" name="emailId" class="form-control" required placeholder="Registered Mail ID">
+                            </div>
+                        </div>
+
+                        <!-- form-group end.// -->
+                        <div class="form-row">
+                            <div class="col form-group">
+                                <label>Password </label>
+                                <input type="password" placeholder="Password" name="password" required class="form-control">
+                            </div>
+                        </div>
+
+
+                         <!-- form-row.// -->
+                        <!-- form-group end.// -->
+
+                        <div class="form-group">
+                            <button type="submit" name="Login" class="btn btn-primary btn-block"> Login  </button>
+                        </div> <!-- form-group// -->
+                    </form>
+                </article> <!-- card-body end .// -->
+            </div> <!-- card.// -->
+        </div> <!-- col.//-->
+
+    </div> <!-- row.//-->
+
+
+</div>
+<!--container end.//-->
